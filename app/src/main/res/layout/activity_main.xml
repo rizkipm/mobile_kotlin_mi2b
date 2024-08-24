@@ -5,24 +5,37 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="70sp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="392dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:gravity="center_horizontal"
+            android:text="Hello Selamat Datang di Pemrograman Mobile MI 2B"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textSize="34sp" />
 
+        <Button
+            android:id="@+id/btnClickHere"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80sp"
+            android:text="Click Here!" />
+
+        <Button
+            android:id="@+id/btnPageKedua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Page 2" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
