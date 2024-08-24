@@ -30,7 +30,7 @@ class PageKedua : AppCompatActivity() {
         }
 
         bSubmit.setOnClickListener(){
-            
+
             val textInput = eName.text
             vResult.setText("Hello, Welcome to Our Club ! " + textInput)
         }
