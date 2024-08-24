@@ -16,8 +16,34 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ini Page Kedua"
+            android:layout_margin="10sp"
+            android:text="Please Input your name"
+            android:textAlignment="textStart"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100sp"
+            android:layout_marginBottom="10sp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:textAlignment="textStart" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
