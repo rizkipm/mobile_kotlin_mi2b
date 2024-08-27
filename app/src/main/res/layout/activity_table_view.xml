@@ -91,7 +91,6 @@
                 android:text="Quit" />
 
             <TextView
-
                 android:padding="3dip"
                 android:text="Ctrl + Q" />
 
