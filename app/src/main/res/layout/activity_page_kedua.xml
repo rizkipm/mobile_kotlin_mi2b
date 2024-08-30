@@ -45,5 +45,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/btnKalkulator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Page Kalkulator" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

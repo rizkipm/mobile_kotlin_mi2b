@@ -1,5 +1,6 @@
 package com.rizki.mobileappskotlinmi2b
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -14,6 +15,7 @@ class PageKedua : AppCompatActivity() {
     private lateinit var eName : EditText
     private lateinit var bSubmit : Button
     private lateinit var vResult : TextView
+    private lateinit var btnKalkulator : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,6 +24,7 @@ class PageKedua : AppCompatActivity() {
         eName = findViewById(R.id.etName)
         bSubmit = findViewById(R.id.btnSubmit)
         vResult = findViewById(R.id.txtResult)
+        btnKalkulator = findViewById(R.id.btnKalkulator)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -33,6 +36,15 @@ class PageKedua : AppCompatActivity() {
 
             val textInput = eName.text
             vResult.setText("Hello, Welcome to Our Club ! " + textInput)
+        }
+
+        btnKalkulator.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@PageKedua, KalkulatorSederhana::class.java)
+            startActivity(intenMenu2)
         }
     }
 }
