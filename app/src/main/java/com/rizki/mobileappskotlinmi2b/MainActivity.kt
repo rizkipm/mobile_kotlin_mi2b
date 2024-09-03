@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnClick : Button
     private lateinit var btnMenu2 : Button
     private lateinit var txtDisplay : TextView
+    private lateinit var btnPassing : Button
+    private lateinit var btnListview : Button
+
 
     //Cara :
     //declare variable widget beserta tipe widget nya
@@ -29,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         btnClick = findViewById(R.id.btnClickHere)
         btnMenu2 = findViewById(R.id.btnPageKedua)
         txtDisplay = findViewById(R.id.textView)
+        btnPassing = findViewById(R.id.btnPassingData)
+        btnListview = findViewById(R.id.btnListview)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -47,6 +52,22 @@ class MainActivity : AppCompatActivity() {
             //Intent implicit : intent yg kita buat sendiri
             //intent explicit : intent yg memanggil library atau class lain
             val intenMenu2 = Intent(this@MainActivity, PageKedua::class.java)
+            startActivity(intenMenu2)
+        }
+        btnPassing.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, LoginScreenActivity::class.java)
+            startActivity(intenMenu2)
+        }
+        btnListview.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, ListViewActivity::class.java)
             startActivity(intenMenu2)
         }
     }
