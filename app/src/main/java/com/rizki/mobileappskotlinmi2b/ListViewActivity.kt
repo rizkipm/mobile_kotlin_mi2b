@@ -3,6 +3,7 @@ package com.rizki.mobileappskotlinmi2b
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,6 +26,13 @@ class ListViewActivity : AppCompatActivity() {
         //kita masukkan data array hewan ke adapater
         //android layout -->
         lv_item.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, namaHewan)
+
+        //untuk bisa d klik setiap item dari list nya
+        lv_item.setOnItemClickListener{
+            parent,view, position, id ->
+                Toast.makeText(this, "Anda Memilih : ${namaHewan[position]}",
+                    Toast.LENGTH_SHORT).show()
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

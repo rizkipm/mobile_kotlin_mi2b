@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var txtDisplay : TextView
     private lateinit var btnPassing : Button
     private lateinit var btnListview : Button
+    private lateinit var btnRvBuku : Button
 
 
     //Cara :
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         txtDisplay = findViewById(R.id.textView)
         btnPassing = findViewById(R.id.btnPassingData)
         btnListview = findViewById(R.id.btnListview)
+        btnRvBuku = findViewById(R.id.btnRecycleView)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -68,6 +70,14 @@ class MainActivity : AppCompatActivity() {
             //Intent implicit : intent yg kita buat sendiri
             //intent explicit : intent yg memanggil library atau class lain
             val intenMenu2 = Intent(this@MainActivity, ListViewActivity::class.java)
+            startActivity(intenMenu2)
+        }
+        btnRvBuku.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, RecycleviewActivity::class.java)
             startActivity(intenMenu2)
         }
     }
