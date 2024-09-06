@@ -19,14 +19,14 @@ class BukuAdapter (private val buku: List<ModelBuku>) :
 
     //pengaturan data item pada setiap list dari recycle view
     override fun onBindViewHolder(holder: BukuAdapterHolder, position: Int) {
-        TODO("Not yet implemented")
+      
         holder.txtPenulis.text = buku[position].penulis
         holder.txtJudul.text = buku[position].title
     }
 
     //membuat layout list item sebagai item dari recycle view
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BukuAdapterHolder {
-        TODO("Not yet implemented")
+
         val  view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_list, parent, false)
         return  BukuAdapterHolder(view)
