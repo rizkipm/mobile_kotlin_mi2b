@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnPassing : Button
     private lateinit var btnListview : Button
     private lateinit var btnRvBuku : Button
+    private lateinit var btnRvBuah : Button
+    private lateinit var btnMovie : Button
 
 
     //Cara :
@@ -36,10 +38,29 @@ class MainActivity : AppCompatActivity() {
         btnPassing = findViewById(R.id.btnPassingData)
         btnListview = findViewById(R.id.btnListview)
         btnRvBuku = findViewById(R.id.btnRecycleView)
+        btnRvBuah = findViewById(R.id.btnRvBuah)
+        btnMovie = findViewById(R.id.btnMovie)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        btnMovie.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, RecycleViewCardMovie::class.java)
+            startActivity(intenMenu2)
+        }
+        btnRvBuah.setOnClickListener(){
+            //perpindahan dari page satu ke yg lain
+            //intent
+            //Intent implicit : intent yg kita buat sendiri
+            //intent explicit : intent yg memanggil library atau class lain
+            val intenMenu2 = Intent(this@MainActivity, CustomImageRecycleView::class.java)
+            startActivity(intenMenu2)
         }
 
         btnClick.setOnClickListener(){

@@ -55,5 +55,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Recycle View Buku" />
+
+        <Button
+            android:id="@+id/btnRvBuah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recycle View Buah" />
+
+        <Button
+            android:id="@+id/btnMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movie List" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
