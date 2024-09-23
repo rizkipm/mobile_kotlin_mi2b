@@ -1,5 +1,6 @@
 package com.rizki.mobileappskotlinmi2b
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ class RecycleViewCardMovie : AppCompatActivity() {
 
     private var recyclerView : RecyclerView? = null
     private var movieAdapter : MovieAdapter? = null
+//    private lateinit var movieAdapter: MovieAdapter
     private var movieList = mutableListOf<ModelMovie>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +31,7 @@ class RecycleViewCardMovie : AppCompatActivity() {
         recyclerView!!.adapter = movieAdapter
 
         prepareMovieList()
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -64,4 +67,11 @@ class RecycleViewCardMovie : AppCompatActivity() {
 
 
     }
+    private fun showDetailDialog(position: Int) {
+        val intent = Intent(this,DetailHero::class.java)
+        intent.putExtra("imageResId",movieList[position].image)
+        startActivity(intent)
+    }
 }
+
+
