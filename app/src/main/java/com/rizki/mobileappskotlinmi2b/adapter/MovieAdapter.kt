@@ -54,7 +54,6 @@ class MovieAdapter constructor(
             val intent = Intent(getActivity,
                 DetailHero::class.java
             )
-            val b = Bundle()
 
 
             //put text into a bundle and add to intent
@@ -62,12 +61,6 @@ class MovieAdapter constructor(
             intent.putExtra("teks", movieList[position].title)
             intent.putExtra("image",movieList[position].image)
 
-
-//            intent.putExtras(b)
-
-            //begin activity
-
-            //begin activity
             getActivity.startActivity(intent)
         }
 //        //ini ketika item di klik
