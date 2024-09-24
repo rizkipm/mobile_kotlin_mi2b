@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MobileAppsKotlinMi2B"
         tools:targetApi="31">
         <activity
+            android:name=".DetailBuahActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailHero"
             android:exported="false" />
         <activity
