@@ -60,6 +60,8 @@ class MovieAdapter constructor(
             //put text into a bundle and add to intent
             intent.putExtra("teks", movieList[position].title)
             intent.putExtra("image",movieList[position].image)
+            intent.putExtra("tanggal",movieList[position].tanggal)
+            intent.putExtra("sinopsis",movieList[position].sinopsis)
 
             getActivity.startActivity(intent)
         }
